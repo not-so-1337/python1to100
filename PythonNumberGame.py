@@ -17,5 +17,9 @@ while guessed == False:
             elif guess < num:
                 print("Too low")
     elif guesscount >= 5:
-        print("You have reached the maximum number of guesses. The correct number was", num)
-        guessed = True
+        if guess == num:
+            print("Correct")
+            guessed = True
+        elif guess != num:
+            print("You have reached the maximum number of guesses. The correct number was", num)
+            guessed = True
